@@ -3,7 +3,9 @@ Projects that use deep learning techniques in different use cases to make predic
 
 #NTL1
 •	Data: The dataset has 2500 observations and 17 columns where we use only percentiles of nighttime light (NTL) brightness as input variables for models to predict dependent variable, county-level population estimates.
+
 •	Exploratory Data Analysis:
+
 o	From the statistics for each variable, we can see percentiles of nighttime light (NTL) brightness per county have certain negative values maybe because of sensor error which was replaced with 0.
 o	There were some counties with all NTL brightness variables as zeroes(like Dawson), possibly due to power outages caused by storms or other natural calamities in those counties. For example, in July 2015, a severe thunder storm flattened power lines in Dawson, Montana and during the same time, there was a hail storm in North Dakota. 
 o	There are no missing values in the data.
@@ -19,6 +21,7 @@ o	There is an extreme outlier in the data, belonging to Los Angeles (LA) in Cali
 o	All three models have right skewed distribution.
 o	25% of data has zero absolute errors and all three models have almost same median.
 o	Even though regression and random forest models have similar distribution till 75 % data, random forest has higher spread followed by regression and GBM respectively.
+
 •	Boxplots for TX:
 o	There are some extreme outliers in the data, belonging to Tarrant, Dallas which are highly populated in Texas as all three models have given bad predictions. 
 o	All three models have very little variability in absolute and absolute percentage errors.
@@ -30,6 +33,7 @@ o	Regression model has highest variability in absolute percentage errors and has
 
 #NTL2
 •	Data: The dataset has 3142 observations and 484 columns where we use monthly VIIRS NTL data from 2013 to 2017, ALAND, AWATER as input variables for models to predict dependent variable, county-level population estimates.
+
 •	Modelling and Evaluation:
 o	10-Fold cross validation was performed on the dataset by implementing 2 models: Random Forest, Neural Network.
 o	After parameter tuning, models with best accuracy for validation set were (in ascending order according to validation MAE): Random Forest, Neural Network.
@@ -39,6 +43,7 @@ o	The model could have been better with
 o	Lower number of epochs can improve the model
 o	Increase or decrease in batch size can also help improve model performance
 o	Higher number of nodes in hidden layer can improve accuracy of model
+
 •	Boxplots for Absolute error:
 o	California and Florida have right skewed distribution.
 o	Texas has a symmetric distribution.
